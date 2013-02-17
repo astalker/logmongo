@@ -1,0 +1,23 @@
+{
+  "name": "logmongo",
+  "version": "0.0.1",
+  "description": "Simple Logging using MongoDB",
+  "main": "logmongo.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/astalker/logmongo.git"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "Alasdair Stalker",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
