@@ -15,7 +15,10 @@
     "url": "git://github.com/astalker/logmongo.git"
   },
   "keywords": [
-    "log"
+    "log",
+    "mongo",
+    "logging",
+    "database"
   ],
   "author": "Alasdair Stalker",
   "license": "MIT",
