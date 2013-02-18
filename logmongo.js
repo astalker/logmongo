@@ -1,5 +1,6 @@
 var mongoose = require('mongoose') 
   , Schema = mongoose.Schema
+  , util = require('util')
   ;
 
 exports.connect = function(dburl, callback) {
@@ -40,5 +41,18 @@ exports.forAll = function(doEach, done) {
       doEach(null, doc);
     });
     done(null);
+  });
+}
+
+exports.lastLog = function(type, callback){
+  Logger.findOne({ type: type }).sort("-ts").findOne(function(err, doc) {
+    if (err) {
+      util.log('FATAL '+ err);
+      callback(err, null);
+    }
+    if (doc===null){
+      doc = { name: new Date(), msg: "", type: 0 };
+    }
+    callback(err, doc);
   });
 }
